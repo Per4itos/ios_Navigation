@@ -9,26 +9,29 @@ import UIKit
 
 class PostViewController: UIViewController {
     
+    
+    
     var titlePost: String = "Post123"
 
-    private lazy var button: UIButton = {
-            let button = UIButton(frame: CGRect(x: 0, y: 0, width: 65, height: 50))
-            button.setImage(UIImage(systemName: "info.circle"), for: .normal)
-            button.addTarget(self, action: #selector(self.didTapButton), for: .touchUpInside)
-            return button
-    }()
+
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
+        let button = UIButton(frame: CGRect(x: 100, y: 400, width: 100, height: 50))
+          button.backgroundColor = .brown
+          button.setTitle("Go in", for: .normal)
+          button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+
+          self.view.addSubview(button)
+
         self.view.backgroundColor = .lightGray
 
         self.navigationItem.title = titlePost
+       
         
-        self.view.addSubview(self.button)
-        
-        self.button.center = self.view.center
+
     }
     
     @objc private func didTapButton() {
@@ -37,6 +40,10 @@ class PostViewController: UIViewController {
         vc.modalPresentationStyle = .popover
         self.present(vc, animated: true)
     }
+    
+    
+    
+  
 }
 
 
