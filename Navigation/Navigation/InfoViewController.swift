@@ -10,7 +10,7 @@ import UIKit
 class InfoViewController: UIViewController {
 
     private lazy var closeButton: UIButton = {
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
         button.setImage(UIImage(systemName: "stop.circle"), for: .normal)
         button.addTarget(self, action: #selector(self.didTapCloseButton), for: .touchUpInside)
         return button

@@ -30,8 +30,17 @@ class ProfileViewController: UIViewController {
         view.backgroundColor = .white
         self.view.addSubview(self.profileHeadrView)
         self.navigationController?.navigationBar.backgroundColor = .white
+
+       
+        
+        let topConstraint_2 = self.profileHeadrView.topAnchor.constraint(equalTo: self.view.topAnchor)
+        NSLayoutConstraint.activate([topConstraint_2])
+        
+        
+        
         self.profileHeadrView.setup(with: self.profile)
     }
+    
     
     
 }
